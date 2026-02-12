@@ -1,7 +1,6 @@
 package org.s3m.leetcode.easy;
 
 
-import java.util.Arrays;
 
 /**
  * Find the Index of the First Occurrence in a String
