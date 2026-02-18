@@ -31,6 +31,7 @@ public class Solution67 {
             }
 
             int sum = s1+s2+c;
+            //todo: optimize with bitwise operations
             if(sum == 0) {
                 acc[i] = '0';
                 c = 0;

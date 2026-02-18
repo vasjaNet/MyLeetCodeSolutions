@@ -18,8 +18,6 @@ package org.s3m.leetcode.easy;
 public class Solution14 {
 
     public String longestCommonPrefix(String[] strs) {
-        String prefix_ = "";
-
         if(strs.length <= 1) {
             return strs.length == 1 ? strs[0] : "";
         }

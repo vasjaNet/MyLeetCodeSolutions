@@ -28,7 +28,7 @@ import java.util.Map;
  */
 public class Solution13 {
 
-    private static Map<Character, Integer> simbols = Map.of(
+    private static final Map<Character, Integer> symbols = Map.of(
             'I', 1,
             'V', 5,
             'X', 10,
@@ -39,9 +39,9 @@ public class Solution13 {
     );
     public int romanToInt(String s) {
         int result = 0;
-        int val = simbols.get(s.charAt(0));
+        int val = symbols.get(s.charAt(0));
         for(int i = 1; i < s.length(); i++) {
-            int next = simbols.get(s.charAt(i));;
+            int next = symbols.get(s.charAt(i));;
             if (val >= next) {
                 result += val;
             } else {
