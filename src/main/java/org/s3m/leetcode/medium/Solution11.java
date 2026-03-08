@@ -19,7 +19,7 @@ import java.util.Arrays;
  * Input: height = [1,1]
  * Output: 1
  */
-public class Solution150 {
+public class Solution11 {
 
     public int maxArea(int[] height) {
         int l = 0;
@@ -51,13 +51,13 @@ public class Solution150 {
         // Example 1
         int[] height = {1,8,6,2,5,4,8,3,7};
         System.out.println("Input:    " + Arrays.toString(height));
-        System.out.println("Output:   " + new Solution150().maxArea(height));
+        System.out.println("Output:   " + new Solution11().maxArea(height));
         System.out.println("Expected: 49");
 
         // Example 2
         height = new int[]{1,1};
         System.out.println("Input:    " + Arrays.toString(height));
-        System.out.println("Output:   " + new Solution150().maxArea(height));
+        System.out.println("Output:   " + new Solution11().maxArea(height));
         System.out.println("Expected: 1");
 
     }
