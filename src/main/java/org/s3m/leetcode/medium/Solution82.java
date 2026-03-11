@@ -1,7 +1,6 @@
 package org.s3m.leetcode.medium;
 
-
-import java.util.Arrays;
+import org.s3m.leetcode.utils.ListNode;
 
 /**
  * Remove Duplicates from Sorted List II
@@ -16,14 +15,6 @@ import java.util.Arrays;
  * Output: [2,3]
  */
 public class Solution82 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null) return null;

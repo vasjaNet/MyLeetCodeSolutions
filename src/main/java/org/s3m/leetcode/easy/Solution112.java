@@ -1,8 +1,8 @@
 package org.s3m.leetcode.easy;
 
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import org.s3m.leetcode.utils.TreeNode;
 
 /**
  * Path Sum
@@ -28,20 +28,7 @@ import java.util.Deque;
  */
 public class Solution112 {
 
-    public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-    }
-
-    record Entry(TreeNode node, int sum){};
+    record Entry(TreeNode node, int sum){}
 
     //todo: optimize use recursion
     public boolean hasPathSum(TreeNode root, int targetSum) {

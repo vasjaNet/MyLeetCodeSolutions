@@ -1,6 +1,6 @@
 package org.s3m.leetcode.medium;
 
-
+import org.s3m.leetcode.utils.ListNode;
 
 /**
  * Remove Nth Node From End of List
@@ -18,16 +18,6 @@ package org.s3m.leetcode.medium;
  * Output: [1]
  */
 public class Solution19 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-
-    }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if(head.next == null) return null;

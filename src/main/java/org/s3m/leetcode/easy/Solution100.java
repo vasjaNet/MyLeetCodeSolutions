@@ -1,6 +1,6 @@
 package org.s3m.leetcode.easy;
 
-
+import org.s3m.leetcode.utils.TreeNode;
 
 /**
  * Same Tree
@@ -19,19 +19,6 @@ package org.s3m.leetcode.easy;
  * Output: false
  */
 public class Solution100 {
-
-    public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-    }
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         boolean result = true;

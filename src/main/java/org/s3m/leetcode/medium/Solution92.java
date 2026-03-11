@@ -1,6 +1,6 @@
 package org.s3m.leetcode.medium;
 
-
+import org.s3m.leetcode.utils.ListNode;
 
 /**
  * Reverse Linked List II
@@ -18,16 +18,6 @@ package org.s3m.leetcode.medium;
  * Output: [5,3]
  */
 public class Solution92 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-
-    }
 
     public ListNode reverseBetween(ListNode head, int left, int right) {
         int count = 1;

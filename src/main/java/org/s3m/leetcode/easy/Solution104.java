@@ -1,6 +1,6 @@
 package org.s3m.leetcode.easy;
 
-
+import org.s3m.leetcode.utils.TreeNode;
 
 /**
  * Maximum Depth of Binary Tree
@@ -16,19 +16,6 @@ package org.s3m.leetcode.easy;
  * Output: 2
  */
 public class Solution104 {
-
-    public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-    }
 
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;

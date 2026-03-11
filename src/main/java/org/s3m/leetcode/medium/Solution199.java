@@ -1,7 +1,7 @@
 package org.s3m.leetcode.medium;
 
-
 import java.util.*;
+import org.s3m.leetcode.utils.TreeNode;
 
 /**
  * Binary Tree Right Side View
@@ -25,24 +25,6 @@ import java.util.*;
  *
  */
 public class Solution199 {
-
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode() {}
-
-        public TreeNode(int _val) {
-            val = _val;
-        }
-
-        public TreeNode(int _val, TreeNode _left, TreeNode _right) {
-            val = _val;
-            left = _left;
-            right = _right;
-        }
-    }
 
     public List<Integer> rightSideView(TreeNode root) {
         Deque<TreeNode> queue = new ArrayDeque<>();

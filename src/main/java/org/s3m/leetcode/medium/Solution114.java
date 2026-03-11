@@ -1,8 +1,8 @@
 package org.s3m.leetcode.medium;
 
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import org.s3m.leetcode.utils.TreeNode;
 
 /**
  * Flatten Binary Tree to Linked List
@@ -26,26 +26,6 @@ import java.util.Deque;
  *
  */
 public class Solution114 {
-
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-
-        public TreeNode() {}
-
-        public TreeNode(int _val) {
-            val = _val;
-        }
-
-        public TreeNode(int _val, TreeNode _left, TreeNode _right) {
-            val = _val;
-            left = _left;
-            right = _right;
-
-        }
-    }
 
     public void flatten_(TreeNode root) {
         if(root == null) return;
