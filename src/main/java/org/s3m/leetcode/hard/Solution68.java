@@ -54,22 +54,16 @@ public class Solution68 {
         List<String> tmpLine = new ArrayList<>();
         int j = 0;
         int currentLineLength = 0;
-        boolean lineReady = false;
         for (int i = 0; i < words.length; i++) {
             if(currentLineLength + words[i].length() + (i-j) <= maxWidth) {
                 tmpLine.add(words[i]);
                 currentLineLength += words[i].length();
             } else {
-                lineReady = true;
-            }
-
-            if(lineReady) {
                 justifiedLines.add(justifyLine(tmpLine, maxWidth, currentLineLength, false));
                 j = i;
                 tmpLine.clear();
                 tmpLine.add(words[i]);
                 currentLineLength = words[i].length();
-                lineReady = false;
             }
         }
         justifiedLines.add(justifyLine(tmpLine, maxWidth, currentLineLength, true));
