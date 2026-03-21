@@ -81,6 +81,14 @@ public class Solution148 {
         // Example 2
         head = new ListNode(-1, new ListNode(5, new ListNode(3, new ListNode(4, new ListNode(0)))));
         System.out.println("Input:    " + head);
+        System.out.println("Output:   " + new Solution148().sortList(head));
+        System.out.println("Expected: [-1,0,3,4,5]");
+
+        // Example 3
+        head = new ListNode();
+        System.out.println("Input:    " + head);
+        System.out.println("Output:   " + new Solution148().sortList(head));
+        System.out.println("Expected: []");
 
 
     }
