@@ -1,4 +1,4 @@
-package org.s3m.leetcode.easy;
+package org.s3m.leetcode.easy._27;
 
 
 import java.util.Arrays;
