@@ -10,12 +10,15 @@ fun main() {
 }
 
 fun removeElement(nums: IntArray, `val`: Int): Int {
-    var k = 0
-    for (i in nums.indices) {
-        if (nums[i] != `val`) {
-            nums[k] = nums[i]
-            k++
+    var shift = 0;
+    for(i in nums.indices) {
+        if(shift > 0) {
+            nums[i-shift] = nums[i]
+        }
+        if(nums[i] == `val`) {
+            shift++
         }
     }
-    return k
+
+    return nums.size - shift;
 }
