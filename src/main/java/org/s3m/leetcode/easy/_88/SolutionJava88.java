@@ -4,33 +4,24 @@ package org.s3m.leetcode.easy._88;
 import java.util.Arrays;
 
 public class SolutionJava88 {
-    //todo: optimize  (by merging from the end of the array)
+
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
-        int endIndex = m-1;
-        int mIndex = 0;
-        int nIndex = 0;
-
-        while(nIndex < n) {
-            int mergeElem = nums2[nIndex];
-            if(mIndex <= endIndex) {
-                int current = nums1[mIndex];
-
-                if(mergeElem < current) {
-                    endIndex++;
-                    for(int j = endIndex; j > mIndex; j--) {
-                        nums1[j] = nums1[j-1];
-                    }
-                    nums1[mIndex] = mergeElem;
-                    nIndex++;
-                }
+        int index = nums1.length-1;
+        int mIndex = m-1;
+        int nIndex = n-1;
+        if(n == 0) return;
+        while(index >= 0) {
+            if(mIndex >=0 && nums1[mIndex] > nums2[nIndex]) {
+                nums1[index] = nums1[mIndex];
+                mIndex--;
             } else {
-                nums1[mIndex] = mergeElem;
-                nIndex++;
+                nums1[index] = nums2[nIndex];
+                nIndex--;
+                if(nIndex < 0) return;
             }
-            mIndex++;
+            index--;
         }
-
     }
 
     public static void main(String[] args) {
