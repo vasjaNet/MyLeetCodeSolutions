@@ -6,19 +6,17 @@ import java.util.Arrays;
 public class SolutionJava27 {
 
     public int removeElement(int[] nums, int val) {
-        int end = nums.length;
-        int i = 0;
-        while(i < end) {
+        int shift = 0;
+        int n = nums.length;
+        for(int i = 0; i < n; i++) {
+            if(shift > 0) {
+                nums[i-shift] = nums[i];
+            }
             if(nums[i] == val) {
-                end--;
-                for(int j = i; j < end; j++) {
-                    nums[j] = nums[j+1];
-                }
-            } else {
-                i++;
+                shift++;
             }
         }
-        return end;
+        return n - shift;
     }
 
     public static void main(String[] args) {
