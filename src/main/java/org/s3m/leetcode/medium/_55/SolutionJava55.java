@@ -10,7 +10,6 @@ public class SolutionJava55 {
         if(n == 0) return true;
         int position = 0;
         int maxJump = 0;
-        boolean isReach = false;
         while(position < n && position <= maxJump ) {
             maxJump = Math.max(maxJump, position+nums[position]);
             position++;
@@ -18,7 +17,7 @@ public class SolutionJava55 {
                 return true;
             }
         }
-        return isReach;
+        return false;
     }
 
 
